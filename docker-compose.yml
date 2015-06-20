@@ -2,7 +2,7 @@ web:
   build: .
   links:
    - mongo
-   - redis
+   # - redis
   volumes:
   - "logs:src/logs"
   ports:
