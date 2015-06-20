@@ -1,0 +1,17 @@
+web:
+  build: .
+  links:
+   - mongo
+   - redis
+  volumes:
+  - "logs:src/logs"
+  ports:
+   - "8000:8000"
+mongo:
+  image: mongo
+  volumes:
+  - "./data/mongo/:/data"
+# redis:
+#   image: redis
+#   volumes:
+#   - "./data/redis/:/data"
