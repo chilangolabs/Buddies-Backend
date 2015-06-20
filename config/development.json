@@ -2,7 +2,13 @@
     
 
     "middleware": {
-
+        "appsec": {
+            "module": {
+                "arguments": [{
+                    "csrf": false
+                }]
+            }
+        },
         "devtools": {
             "enabled": true,
             "priority": 35,

@@ -1,6 +1,24 @@
 {
 
-    
+    "express": {
+        "view cache": false,
+        "view engine": "jade",
+        "views": "path:./views"
+    },
+
+    "mongoose": {
+        "url": "mongo://mongo/buddies"
+    },
+
+    "facebook": {
+        "ID": "376288125909497",
+        "SECRET": "463dab7ad719f65759b55d1696b6aae3",
+        "URL": "http://buddies.chilangolabs.com/facebook/callback/" 
+    },
+
+    "logger": {
+        "dirname": "path:./logs"
+    },
 
     "middleware": {
 
