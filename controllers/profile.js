@@ -1,7 +1,7 @@
 'use strict';
 
-var mdwIsAuthenticated = require('../../lib/passport').isAuthenticated;
-var User = require('../../models/User');
+var mdwIsAuthenticated = require('../lib/passport').isAuthenticated;
+var User = require('../models/User');
 
 module.exports = function(router) {
 
