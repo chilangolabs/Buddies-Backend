@@ -12,6 +12,7 @@ var userModel = function() {
     'fbId': String,
     'fbToken': String,
     'smsVerified': Boolean,
+    'smsCode': String,
     'emailVerified': Boolean,
     'gpsVerified': Boolean,
     'genere': String,
