@@ -16,9 +16,6 @@ options = {
     twilio.initialize(config.get('twilio:sid'), config.get('twilio:token'));
     var mongoose = require('./lib/mongoose');
     mongoose.initialize({url: config.get('mongoose:url')});
-    var passport = require('./lib/passport');
-    passport.initialize(config.get('facebook:id'),
-      config.get('facebook:secret'), config.get('facebook:url'), app);
     /*
      * Add any additional config setup or overrides here. `config` is an initialized
      * `confit` (https://github.com/krakenjs/confit/) configuration object.
@@ -32,4 +29,10 @@ app.use(kraken(options));
 app.on('start', function() {
   console.log('Application ready to serve requests.');
   console.log('Environment: %s', app.kraken.get('env:env'));
+});
+app.on('middleware:after:session', function(eventargs) {
+  var FB_ID = app.kraken.get('facebook:id');
+  var FB_SECRET = app.kraken.get('facebook:secret');
+  var FB_URL_CALLBACK = app.kraken.get('facebook:url');
+  require('./lib/passport').initialize(FB_ID, FB_SECRET, FB_URL_CALLBACK, app);
 });
