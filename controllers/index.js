@@ -58,7 +58,7 @@ module.exports = function(router) {
             {
               id: '678',
               name: 'Areli Contreras',
-              img: '/img/Aree.jpg'
+              img: '/img/Aree.png'
             }
           ]
         },
@@ -67,19 +67,19 @@ module.exports = function(router) {
           icon: '',
           users: [
             {
-              id: '456',
-              name: 'Vivis Rosano',
-              img: '/img/Vivis.png'
-            },
-            {
               id: '123',
               name: 'Mario',
-              img: '/img/Mario.jpg'
+              img: '/img/Mario.png'
             },
             {
               id: '567',
               name: 'Day Tellez',
               img: '/img/Day.png'
+            },
+            {
+              id: '456',
+              name: 'Vivis Rosano',
+              img: '/img/Vivis.png'
             }
           ]
         },
