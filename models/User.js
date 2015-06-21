@@ -14,7 +14,7 @@ var userModel = function() {
     'smsVerified': Boolean,
     'emailVerified': Boolean,
     'gpsVerified': Boolean,
-    'genere': Boolean,
+    'genere': String,
     'talents': [String],
     'phoneNumber': String,
     'history': [{
@@ -42,7 +42,8 @@ var userModel = function() {
           'displayName': profile.displayName,
           'fbId': profile.id,
           'fbToken': key,
-          'email': profile.emails[0].value
+          'email': profile.emails[0].value,
+          'genere': ((profile._json.gender) ? profile._json.gender : '')
         }, function(err, user) {
           if (err) {return cb(err, null);}
           cb(err, user);
