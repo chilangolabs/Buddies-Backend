@@ -13,7 +13,7 @@ module.exports = function(router) {
       failureRedirect: '/error'
     }
   ));
-  router.get('/api',
+  router.post('/api',
     passport.authenticate('facebook-token', {
       successRedirect: '/',
       failureRedirect: '/error'
