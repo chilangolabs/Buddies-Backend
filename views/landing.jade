@@ -1,0 +1,118 @@
+doctype html
+html
+  head
+    title Buddies
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    link(rel='shortcut icon', href='images/favicon.ico')
+    link(href='css/style.css', rel='stylesheet', type='text/css', media='all')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800', rel='stylesheet', type='text/css')
+    script(src='js/jquery-1.10.2.min.js', type='text/javascript')
+    script(type='text/javascript', src='js/move-top.js')
+    script(type='text/javascript', src='js/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+      });
+      });
+    link(rel='stylesheet', type='text/css', href='css/slick.css')
+    script(type='text/javascript', src='js/slick.js')
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $('.single-item').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      autoplay:true,
+      arrows:false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+      });
+      });
+  body
+    .header
+      .header-top
+        .wrap
+          .logo
+            a(href='index.html')
+              img(src='images/logo.png', alt='')
+          .cssmenu
+            ul#nav
+              li.current
+                a.scroll(href='#section-1') Home
+              li
+                a.scroll(href='#section-2') Características
+              li
+                a.scroll(href='#section-5') Acerca de
+          .clear
+      #section-1.header-bottom
+        .wrap
+          .img-banner
+            .img-banner-info
+              h3
+                | Buddies es una plataforma que te permite hacer intercambio de servicios con gente de tu comunidad para así generar lazos de confianza y apoyar con tus talentos a quien los necesite y al mismo tiempo recibir ayuda de los demás.
+              .app-btn
+                a(href='#') Descargar en Google Play
+            .img-banner-pic
+              img(src='images/mobile.png', align='')
+            .clear  
+    .main
+      // Features
+      #section-2.features
+        .wrap
+          h2 Características
+          p
+            | En Buddies puedes intercambiar servicios con tus vecinos de forma segura gracias a nuestro sistema de validación de perfiles y a las recomendaciones de otras personas como tú.
+          .features-list
+            .col_1_of_3.span_1_of_3
+              .dc-head
+                .dc-head-icon
+                  img(src='images/img01.png', alt='')
+                .dc-head-info
+                  h3 Agrega tus talentos
+                  p Comparte las cosas en las que eres bueno y puedes contribuir con tu comunidad.
+                .clear  
+            .col_1_of_3.span_1_of_3
+              .dc-head
+                .dc-head-icon
+                  img(src='images/img02.png', alt='')
+                .dc-head-info
+                  h3 Elige un servicio
+                  p
+                    | Elige el servicio que necesitas en este momento y que te gustaría recibir de alguien de tu comunidad.
+                .clear  
+            .col_1_of_3.span_1_of_3
+              .dc-head
+                .dc-head-icon
+                  img(src='images/img03.png', alt='')
+                .dc-head-info
+                  h3 Comparte tu experiencia
+                  p
+                    | Puedes valorar el servicio que recibiste con una serie de preguntas y un breve comentario para así generar confianza.
+                .clear  
+            .clear
+      // Footer
+      #section-5.footer
+        .wrap
+          .footer-top
+            img(src='images/logo.png', alt='')
+            .section.group
+              .col_1_of_3.span_1_of_3
+                h3
+              .col_1_of_3.span_1_of_3
+              .col_1_of_3.span_1_of_3
+                h3 Acerca
+                p
+                  span
+                    | Buddies es un proyecto desarrollado por ChilangoLabs que inició durante el Hackamano México D.F. 2015
+        .footer-bottom
+          .copy
+            p  © All Rights Reserved 2015 
+      script(type='text/javascript').
+        $(document).ready(function() {
+        $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+      a#toTop(href='#')
+        span#toTopHover
