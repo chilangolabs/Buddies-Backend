@@ -42,7 +42,7 @@ body{
 	-ms-transition:all .2s linear;
 }
 .header{
-	background:url("../images/banner-bg.jpg") no-repeat;
+	background:url("../img/banner-bg.jpg") no-repeat;
 	background-size: 100% 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -129,7 +129,7 @@ body{
 	font-size:17px;
 	font-weight:600;
 	color:#FFF;
-	background:#282828 url(../images/phone-icon.png) no-repeat 30px 6px; 
+	background:#282828 url(../img/phone-icon.png) no-repeat 30px 6px; 
 	padding:22px 35px 22px 75px;
 	text-transform:uppercase; 
 	-webkit-transition: all 0.3s ease-out;
@@ -144,7 +144,7 @@ body{
 }
 .app-btn a:hover{
 	color:#da332d;
-	background:#FFF url(../images/phone-icon-hover.png) no-repeat 30px 6px; 
+	background:#FFF url(../img/phone-icon-hover.png) no-repeat 30px 6px; 
 }
 /*--content--*/
 .features {
@@ -238,7 +238,7 @@ body{
 }
 .content-middle{
 	padding:12% 0;
-	background:#d7dedc url("../images/banner-pic.png") no-repeat center right;
+	background:#d7dedc url("../img/banner-pic.png") no-repeat center right;
 	background-size: 100% 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -412,7 +412,7 @@ body{
 	height:50px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/arrow_up.png) no-repeat center;
+	background: url(../img/arrow_up.png) no-repeat center;
 }
 #toTop:active, #toTop:focus {
 	outline: none;
@@ -487,10 +487,10 @@ body{
 	.app-btn a{
 		font-size:15px;
 		padding:20px 25px 20px 70px;
-		background:#282828 url(../images/phone-icon.png) no-repeat 25px 4px;
+		background:#282828 url(../img/phone-icon.png) no-repeat 25px 4px;
 	}
 	.app-btn a:hover{
-		background:#FFF url(../images/phone-icon-hover.png) no-repeat 25px 4px;
+		background:#FFF url(../img/phone-icon-hover.png) no-repeat 25px 4px;
 	}
 	.content-middle h2{
 		font-size:2em;
