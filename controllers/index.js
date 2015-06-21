@@ -9,9 +9,9 @@ module.exports = function(router) {
   router.get('/', function(req, res) {
     res.format({
       json: function() {
-        res.json(JSON.stringify(req.user));
+        res.json(req.user.toObject());
       },
-      default: function() {
+      html: function() {
         res.locals.user = req.user;
         res.render('index');
       }
