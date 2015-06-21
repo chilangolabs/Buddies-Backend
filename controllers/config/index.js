@@ -9,6 +9,7 @@ module.exports = function(router) {
     var phone = req.body.phone || req.query.phone;
     if (!phone) {return res.status(400);}
     req.user.phoneNumber = phone;
+    req.user.smsVerified = false;
     req.user.save(function(err, user) {
       if (err) {return res.redirect('/error');}
       next();
