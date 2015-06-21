@@ -1,7 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var FB = require('FB');
+var FB = require('fb');
 
 var userModel = function() {
   var userSchema = new mongoose.Schema({
