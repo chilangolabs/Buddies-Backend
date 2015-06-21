@@ -14,6 +14,11 @@ options = {
   onconfig: function(config, next) {
     var twilio = require('./lib/twilio');
     twilio.initialize(config.get('twilio:sid'), config.get('twilio:token'));
+    var mongoose = require('./lib/mongoose');
+    mongoose.initialize({url: config.get('mongoose:url')});
+    var passport = require('./lib/passport');
+    passport.initialize(config.get('facebook:id'),
+      config.get('facebook:secret'), config.get('facebook:url'));
     /*
      * Add any additional config setup or overrides here. `config` is an initialized
      * `confit` (https://github.com/krakenjs/confit/) configuration object.
