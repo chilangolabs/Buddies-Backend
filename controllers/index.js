@@ -9,9 +9,14 @@ module.exports = function(router) {
   router.get('/', function(req, res) {
     res.format({
       json: function() {
-        res.json(req.user.toObject());
+        if (req.isAuthenticated()) {
+          res.json(req.user.toObject());
+        } else {
+          res.json({});
+        }
       },
       html: function() {
+        res.locals.isAuthenticated = req.isAuthenticated();
         res.locals.user = req.user;
         res.render('index');
       }
