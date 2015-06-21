@@ -59,7 +59,7 @@
             "priority": 25
             ,"module": {
                 "name": "cookie-parser"
-                ,"arguments": ["C0N3CT4 P4Y"]
+                ,"arguments": ["BUDD135"]
             }
         }
 
@@ -67,7 +67,7 @@
             "priority": 30
             ,"module": {
                 "arguments": [{
-                    "secret": "C0N3CT4 P4Y"
+                    "secret": "BUDD135"
                     ,"resave": true
                     ,"saveUninitialized": true
                 }]

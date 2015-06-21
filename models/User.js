@@ -24,6 +24,8 @@ var userModel = function() {
   });
 
   userSchema.statics.findFacebook = function(profile, key, cb) {
+    console.log('findFacebook', profile);
+
     if (!profile) {
       return cb(new Error('profile object not filled'));
     }
