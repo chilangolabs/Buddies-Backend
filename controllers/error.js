@@ -5,7 +5,7 @@ module.exports = function(router) {
   router.get('/', function(req, res) {
     res.format({
       json: function() {
-        res.status(400);
+        res.sendStatus(400);
       },
       html: function() {
         res.status(400).render('error');
