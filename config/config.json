@@ -13,7 +13,7 @@
     "facebook": {
         "id": "376288125909497",
         "secret": "463dab7ad719f65759b55d1696b6aae3",
-        "url": "http://buddies.chilangolabs.com/facebook/callback/" 
+        "url": "http://buddies.chilangolabs.com/auth/facebook/callback/" 
     },
 
     "logger": {
