@@ -4,7 +4,7 @@ var mdwIsAuthenticated = require('../lib/passport').isAuthenticated;
 
 module.exports = function(router) {
 
-  router.get('/', mdwIsAuthenticated, function(req, res, next) {
+  router.get('/', function(req, res, next) {
     res.format({
       json: function() {
         res.json(req.user.toObject());
