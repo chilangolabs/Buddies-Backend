@@ -5,7 +5,7 @@ var User = require('../models/User');
 
 module.exports = function(router) {
 
-  router.get('/profile', function(req, res, next) {
+  router.get('/', function(req, res, next) {
     var id = req.body.id || req.query.id;
     if (!id) {return res.sendStatus(400);}
     User.findById(id, function(err, user) {
@@ -14,7 +14,7 @@ module.exports = function(router) {
     });
   });
 
-  router.post('/profile', function(req, res, next) {
+  router.post('/', function(req, res, next) {
     var body = req.body || req.query;
     User.create({
       'displayName': body.displayName,
