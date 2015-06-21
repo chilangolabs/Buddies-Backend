@@ -25,17 +25,15 @@
         "token": "7bb61c2870a956c9c644c36f49781071"
     },
 
+    "static": {
+        "img": "path:./public/img"
+    },
+
     "middleware": {
         "static": {
             "priority": 10
             ,"module": {
                 "arguments": [ "path:./.build" ]
-            }
-        },
-        "static": {
-            "priority": 11
-            ,"module": {
-                "arguments": [ "path:./public/img" ]
             }
         }
 

@@ -38,3 +38,7 @@ app.on('middleware:after:session', function(eventargs) {
   var FB_URL_CALLBACK = app.kraken.get('facebook:url');
   require('./lib/passport').initialize(FB_ID, FB_SECRET, FB_URL_CALLBACK, app);
 });
+app.on('middleware:after:static', function(eventargs) {
+  var serve = require('serve-static')(app.kraken.get('static:img'));
+  app.use('/img', serve);
+});
