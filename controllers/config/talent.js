@@ -10,8 +10,12 @@ module.exports = function(router) {
     if (!talents) {return res.sendStatus(400);}
     req.user.update({'$push': {'talents': {'$each': talents}}}, function(err, user) {
       if (err) {return res.sendStatus(500);}
-      res.status(200).json({talents: user.talents});
+      res.sendStatus(200);
     });
+  });
+
+  router.get('/getTalents', mdwIsAuthenticated, function(req, res, next) {
+    res.status(200).json({talents:req.user.talents});
   });
 
 };
