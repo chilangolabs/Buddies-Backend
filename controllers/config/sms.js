@@ -13,6 +13,7 @@ module.exports = function(router) {
     }
     if (code === req.user.smsCode) {
       req.user.smsVerified = true;
+      delete req.user.smsCode;
       req.user.save(function(err, user) {
         if (err) {return res.status(400).json({error: 'db error'});}
         res.sendStatus(200);
