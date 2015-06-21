@@ -25,24 +25,19 @@ module.exports = function(router) {
           icon: '',
           users: [
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '123',
+              name: 'Mario García',
+              img: '/img/Mario.png'
             },
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '234',
+              name: 'Angel Lira',
+              img: '/img/Angel.png'
             },
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
-            },
-            {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '345',
+              name: 'Victor Haghen',
+              img: '/img/Vic.png'
             }
           ]
         },
@@ -51,50 +46,40 @@ module.exports = function(router) {
           icon: '',
           users: [
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '456',
+              name: 'Vivis Rosano',
+              img: '/img/Vivis.png'
             },
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '567',
+              name: 'Day Tellez',
+              img: '/img/Day.png'
             },
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
-            },
-            {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '678',
+              name: 'Areli Contreras',
+              img: '/img/Aree.jpg'
             }
           ]
         },
         {
-          title: 'Limpieza',
+          title: 'Eventos',
           icon: '',
           users: [
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '456',
+              name: 'Vivis Rosano',
+              img: '/img/Vivis.png'
             },
             {
-              id: '213',
+              id: '123',
               name: 'Mario',
-              img: '/img/213.jpg'
+              img: '/img/Mario.jpg'
             },
             {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
-            },
-            {
-              id: '213',
-              name: 'Mario',
-              img: '/img/213.jpg'
+              id: '567',
+              name: 'Day Tellez',
+              img: '/img/Day.png'
             }
           ]
         },
