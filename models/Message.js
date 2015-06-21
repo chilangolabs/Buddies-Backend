@@ -2,8 +2,8 @@
 
 var mongoose = require('mongoose');
 
-var JobsModel = function() {
-  var jobSchema = new mongoose.Schema({
+var messageModel = function() {
+  var messageSchema = new mongoose.Schema({
     'createdAt': Date,
     'poke': Boolean,
     'message': String,
@@ -21,8 +21,8 @@ var JobsModel = function() {
     }
   });
 
-  var Job = mongoose.model('Job', jobSchema);
-  return Job;
+  var Message = mongoose.model('Message', messageSchema);
+  return Message;
 };
 
-module.exports = new JobsModel();
+module.exports = new messageModel();
