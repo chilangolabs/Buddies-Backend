@@ -17,7 +17,7 @@ module.exports = function(router) {
         if (err) {return res.status(400).json({error: 'db error'});}
         res.status(200);
       });
-    }
+    } else { res.status(400); }
   });
 
 };
