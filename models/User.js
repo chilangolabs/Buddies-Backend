@@ -17,7 +17,10 @@ var userModel = function() {
     'genere': Boolean,
     'talents': [String],
     'phoneNumber': String,
-    'history': []
+    'history': [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Job'
+    }]
   });
 
   userSchema.statics.findFacebook = function(profile, key, cb) {
