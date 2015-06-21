@@ -41,4 +41,8 @@ app.on('middleware:after:session', function(eventargs) {
 app.on('middleware:after:static', function(eventargs) {
   var serve = require('serve-static')(app.kraken.get('static:img'));
   app.use('/img', serve);
+  var serve = require('serve-static')(app.kraken.get('static:img'));
+  app.use('/css', serve);
+var serve = require('serve-static')(app.kraken.get('static:img'));
+  app.use('/js', serve);
 });
