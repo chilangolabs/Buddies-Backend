@@ -7,7 +7,7 @@
     },
 
     "mongoose": {
-        "url": "mongo://mongo/buddies"
+        "url": "mongodb://mongo/buddies"
     },
 
     "facebook": {

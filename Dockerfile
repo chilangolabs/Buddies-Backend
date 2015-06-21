@@ -19,6 +19,8 @@ WORKDIR /
 RUN     rm -rf Python-2.7.5
 
 # App
+COPY    . /src
+RUN     rm -rf /src
 RUN     git clone https://github.com/chilangolabs/BuddiesBack.git /src
 # Install app dependencies
 RUN     cd /src; npm install
