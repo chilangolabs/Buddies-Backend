@@ -17,7 +17,6 @@ module.exports = function(router) {
   router.post('/', function(req, res, next) {
     var body = req.body || req.query;
     User.create({
-      '_id': body.id,
       'displayName': body.displayName,
       'fbPicture': body.fbPicture,
       'talents': [body.talent]
