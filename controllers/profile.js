@@ -22,6 +22,7 @@ module.exports = function(router) {
       'fbPicture': body.fbPicture,
       'talents': [body.talent]
     }, function(err, user) {
+      console.error(err);
       if (err) {return res.sendStatus(400);}
       res.status(200).json(user);
     });
