@@ -26,29 +26,67 @@
     },
 
     "middleware": {
-
         "static": {
-            "module": {
+            "priority": 10
+            ,"module": {
                 "arguments": [ "path:./.build" ]
             }
         }
 
-        ,"router": {
-            "module": {
-                "arguments": [{ "directory": "path:./controllers" }]
+        ,"json":{
+            "priority": 21
+            ,"module": {
+                "name": "body-parser"
+                ,"method": "json"
             }
         }
 
+        ,"urlencoded":{
+            "priority": 22
+            ,"module": {
+                "name": "body-parser"
+                ,"method": "urlencoded"
+                ,"arguments": [{"extended": true}]
+            }
+        }
         
+        ,"multipart":{
+            "priority": 23
+            ,"module": "kraken-js/middleware/multipart"
+        }
+
+        ,"cookieParser": {
+            "priority": 25
+            ,"module": {
+                "name": "cookie-parser"
+                ,"arguments": ["C0N3CT4 P4Y"]
+            }
+        }
+
+        ,"session": {
+            "priority": 30
+            ,"module": {
+                "arguments": [{
+                    "secret": "C0N3CT4 P4Y"
+                    ,"resave": true
+                    ,"saveUninitialized": true
+                }]
+            }
+        }
+
         ,"expressView": {
-            "priority": 100,
+            "priority": 50,
             "enabled": true,
             "module": {
                 "name": "engine-munger/lib/expressView"
             }
         }
-        
 
-        
+        ,"router": {
+            "priority": 1000
+            ,"module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
+        }
     }
 }
