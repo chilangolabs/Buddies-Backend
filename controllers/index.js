@@ -10,9 +10,9 @@ module.exports = function(router) {
         res.json(req.user.toObject());
       },
       html: function() {
-        res.locals.isAuthenticated = req.isAuthenticated();
-        res.locals.user = req.user;
-        res.render('index');
+        //res.locals.isAuthenticated = req.isAuthenticated();
+        //res.locals.user = req.user;
+        res.render('landing');
       }
     });
   });
