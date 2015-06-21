@@ -37,19 +37,18 @@ var userModel = function() {
     if (!profile.emails || !profile.emails[0]) {
       profile.emails = [{}]; // Si no tiene email evita una excepción.
     }
-    FB.setAccessToken(key);
-    FB.napi('me/picture', function(err, res) {
+    self.findOne({'fbId': profile.id}, function(err, user) {
       if (err) {
-        return console.error(err, 'findFacebook me/picture');
+        return cb(err, user);
       }
-      if (res && res.data && res.data[0]) {
-        profile.fbPicture = res.data[0].url;
-      }
-      self.findOne({'fbId': profile.id}, function(err, user) {
-        if (err) {
-          return cb(err, user);
-        }
-        if (!user) {
+      if (!user) {
+        FB.get('me/picture?access_token=' + key, function(err, res) {
+          if (err) {
+            return console.error(err, 'findFacebook me/picture');
+          }
+          if (res && res.data && res.data[0]) {
+            profile.fbPicture = res.data[0].url;
+          }
           User.create({
             'displayName': profile.displayName,
             'fbId': profile.id,
@@ -61,14 +60,14 @@ var userModel = function() {
             if (err) {return cb(err, null);}
             cb(err, user);
           });
-        } else {
-          user.fbToken = key;
-          user.save(function(err) {
-            if (err) {return cb(err, null);}
-            cb(err, user);
-          });
-        }
-      });
+        });
+      } else {
+        user.fbToken = key;
+        user.save(function(err) {
+          if (err) {return cb(err, null);}
+          cb(err, user);
+        });
+      }
     });
   };
 

@@ -16,8 +16,8 @@ options = {
     twilio.initialize(config.get('twilio:sid'), config.get('twilio:token'));
     var mongoose = require('./lib/mongoose');
     mongoose.initialize({url: config.get('mongoose:url')});
-    var FB = require('fb');
-    FB.options({'appSecret': config.get('facebook:secret')});
+    var FB = require('fbgraph');
+    FB.setAppSecret(config.get('facebook:secret'));
     /*
      * Add any additional config setup or overrides here. `config` is an initialized
      * `confit` (https://github.com/krakenjs/confit/) configuration object.
