@@ -1,19 +1,13 @@
 'use strict';
 
-var IndexModel = require('../models/index');
+var mdwIsAuthenticated = require('../lib/passport').isAuthenticated;
 
 module.exports = function(router) {
 
-  var model = new IndexModel();
-
-  router.get('/', function(req, res) {
+  router.get('/', mdwIsAuthenticated, function(req, res) {
     res.format({
       json: function() {
-        if (req.isAuthenticated()) {
-          res.json(req.user.toObject());
-        } else {
-          res.json({});
-        }
+        res.json(req.user.toObject());
       },
       html: function() {
         res.locals.isAuthenticated = req.isAuthenticated();
