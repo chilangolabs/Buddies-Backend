@@ -10,8 +10,13 @@ module.exports = function(router) {
   router.get('/callback',
     passport.authenticate('facebook', {
       successRedirect: '/',
-      failureRedirect: '/'
+      failureRedirect: '/error'
     }
   ));
+  router.get('/api',
+    passport.authenticate('facebook-token', {
+      successRedirect: '/',
+      failureRedirect: '/error'
+    }));
 
 };
