@@ -14,6 +14,7 @@
     "engine-munger": "^0.2.0",
     "express": "^4.3.0",
     "fbgraph": "^1.0.0",
+    "helmet": "^0.9.1",
     "jade": "^1.11.0",
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",

@@ -88,6 +88,14 @@
             }
         }
 
+        ,"no-cache":{
+            "priority": 500
+            ,"module": {
+                "name": "helmet"
+                ,"method": "no-cache"
+            }
+        }
+
         ,"router": {
             "priority": 1000
             ,"module": {
