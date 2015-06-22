@@ -93,6 +93,7 @@
             ,"module": {
                 "name": "helmet"
                 ,"method": "noCache"
+                ,"arguments": [ {"noEtag": true} ]
             }
         }
 
