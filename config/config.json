@@ -88,11 +88,11 @@
             }
         }
 
-        ,"no-cache":{
+        ,"noCache":{
             "priority": 500
             ,"module": {
                 "name": "helmet"
-                ,"method": "no-cache"
+                ,"method": "noCache"
             }
         }
 
