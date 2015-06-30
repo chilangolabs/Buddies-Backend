@@ -7,7 +7,7 @@
     },
 
     "mongoose": {
-        "url": "mongodb://mongo/buddies"
+        "url": "mongodb://admin:C4HboEwXVU4mCd@ds049598.mongolab.com:49598/buddies"
     },
 
     "facebook": {
